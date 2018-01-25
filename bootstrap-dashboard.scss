@@ -1,0 +1,85 @@
+// Options
+$enable-rounded: false !default;
+@import './variables';
+@import './node_modules/bootstrap/scss/bootstrap';
+@import './bootswatch';
+.btn {
+    font-weight: unset;
+    text-transform: unset;
+    border-width: 1px 1px 4px 1px;
+    &.btn-outline-secondary {
+        color: lighten($black, 5%);
+        border-color: darken($secondary, 20%);
+    }
+}
+
+.nav {
+    &.nav-tabs {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-bottom-color: darken($secondary, 20%);
+        .nav-item {
+            &:not(:first-child) {
+                .nav-link {
+                    margin-left: 3px;
+                }
+            }
+            .nav-link {
+                border-color: darken($secondary, 20%);
+                border-bottom-color: transparent;
+                &.active {
+                    color: $black;
+                    background-color: $secondary;
+                }
+                &.disabled {
+                    border-color: darken($secondary, 20%);
+                    &:hover {
+                        border-color: darken($secondary, 20%);
+                    }
+                }
+            }
+        }
+    }
+    &.nav-pills {
+        &:not(.flex-column) {
+            border-bottom: 1px solid darken($secondary, 20%);
+        }
+        .nav-item {
+            .nav-link {
+                color: $black;
+                border-color: darken($secondary, 20%);
+                border-bottom-color: transparent;
+                &.active {
+                    color: $black;
+                    background-color: $secondary;
+                }
+                &.disabled {
+                    color: $nav-link-disabled-color;
+                }
+            }
+        }
+    }
+}
+
+.list-group {
+    .list-group-item {
+        line-height: 1rem;
+    }
+}
+
+.pagination {
+    li {
+        a,
+        span {
+            font-weight: unset;
+        }
+    }
+}
+
+.input-group {
+    .btn {
+        &.btn-secondary {
+            border-color: $input-border-color;
+        }
+    }
+}
